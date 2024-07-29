@@ -1,0 +1,118 @@
+:root {
+	--main-color: #1d1d1d;
+	--primary-color: rgb(2, 255, 213);
+	--secondary-color: #c5c5c5;
+	--dark-orange: rgb(155, 70, 40);
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: var(--main-color);
+	padding-inline: 1rem;
+	display: flex;
+	justify-content: center;
+}
+
+body main {
+	width: 100%;
+	max-width: 1000px;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	transform: translateY(80px);
+}
+main h1 {
+	color: var(--primary-color);
+	text-transform: uppercase;
+	font-size: calc(1vw + 1.9rem);
+}
+main ul {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 5rem;
+	transform: translateY(70px);
+}
+main ul li {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+main ul li:nth-child(2) {
+	flex-direction: column;
+	gap: 1rem;
+}
+.media__btn-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+main ul li:nth-child(2) h2 {
+	color: var(--secondary-color);
+	font-size: calc(1vw + 1.6rem);
+}
+
+main ul li button {
+	background-color: #3837377a;
+	color: var(--dark-orange);
+	height: 40px;
+	width: 70%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 1.4rem;
+	font-size: 1.2rem;
+	border: 1px solid transparent;
+	box-shadow: 0px 0px 2px var(--secondary-color);
+	border-radius: 6px;
+	transition: all 0.2s linear;
+	cursor: pointer;
+}
+main ul li button img {
+	height: 30px;
+	width: 30px;
+	object-fit: cover;
+	object-position: center;
+}
+main ul li:nth-child(2) button {
+	border: none;
+	box-shadow: 0px 0px 2px transparent;
+}
+main ul li button:hover {
+	background-color: #858585;
+}
+
+@media (min-width: 768px) {
+	main ul {
+		gap: 10rem;
+	}
+	main ul li {
+		flex-direction: row;
+	}
+
+	.media__btn-container {
+		flex-direction: row;
+	}
+
+	main ul li button {
+		width: 30%;
+	}
+}

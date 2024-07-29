@@ -1,0 +1,173 @@
+:root {
+	--main-color: #1d1d1d;
+	--primary-color: rgb(2, 255, 213);
+	--secondary-color: #c5c5c5;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+body {
+	width: 100%;
+	position: relative;
+	background-color: var(--main-color);
+}
+.background--image {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 105vh;
+	z-index: -1;
+	background-color: var(--main-color);
+}
+.background--image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	opacity: 0.04;
+}
+main {
+	width: 100%;
+	transform: translateY(12.5vh);
+	padding-block-start: 6rem;
+	padding-inline: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+main h1 {
+	text-align: center;
+	margin-block: 2rem;
+	margin-block-end: 3rem;
+	color: var(--secondary-color);
+}
+section.container--1,
+section.container--2,
+section.container--3,
+section.container--4,
+section.container--5 {
+	max-width: 700px;
+	width: 100%;
+	color: var(--secondary-color);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+	padding: 4px;
+}
+section.container--1 > p {
+	padding: 22px;
+	padding-block: 2.9rem;
+	line-height: 24px;
+	box-shadow: 0px 0px 2px var(--primary-color),
+		0px 0px 2px var(--secondary-color), 0px 0px 2px var(--primary-color);
+	border-radius: 3px;
+}
+section.container--1 button {
+	background-color: rgb(1, 105, 88);
+	width: 60%;
+	color: var(--secondary-color);
+	margin-block-start: 2rem;
+	padding: 5px 13px;
+	font-size: 1.2rem;
+	border: none;
+	border-radius: 3px;
+	box-shadow: 1px 1px 2px var(--secondary-color),
+		-1px 1px 2px var(--secondary-color), -1px 1px 2px var(--secondary-color),
+		1px 1px 2px var(--secondary-color);
+	transition: all 0.2s linear;
+	cursor: pointer;
+}
+section.container--1 button:hover {
+	background-color: rgba(1, 105, 88, 0.863);
+}
+
+section.container--2,
+section.container--3,
+section.container--4 {
+	margin-block: 4rem;
+	padding: 22px;
+	padding-block: 2.9rem;
+	box-shadow: 0px 0px 2px var(--primary-color),
+		0px 0px 2px var(--secondary-color), 0px 0px 2px var(--primary-color);
+	border-radius: 3px;
+}
+section.container--2 p {
+	line-height: 24px;
+}
+section.container--4 strong {
+	color: rgb(155, 70, 40);
+}
+section.container--5 {
+	background-color: rgb(1, 105, 88);
+	margin-block: 4rem;
+	padding: 22px;
+	padding-block: 2.9rem;
+	border-radius: 4px;
+}
+mark,
+em {
+	background-color: transparent;
+	color: rgb(155, 70, 40);
+}
+section.container--5 a {
+	color: var(--secondary-color);
+	text-decoration: underline;
+}
+.facebook,
+.instagram {
+	color: dodgerblue !important;
+}
+
+.test--typeWriter {
+	width: 55%;
+	word-break: break-all;
+	margin: 0 auto;
+	letter-spacing: 0.13em;
+}
+
+@media (min-width: 980px) {
+	body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	main {
+		max-width: 1200px;
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		grid-gap: 20px;
+		justify-items: center;
+		align-items: start;
+		grid-template-areas:
+			"h1 h1 h1 h1 h1 h1"
+			"sec1 sec1 sec1 sec2 sec2 sec2"
+			"sec3 sec3 sec3 sec3 sec3 sec3"
+			"sec4 sec4 sec4 sec5 sec5 sec5";
+	}
+	main h1 {
+		grid-area: h1;
+	}
+	section.container--1 {
+		grid-area: sec1;
+	}
+	section.container--2 {
+		grid-area: sec2;
+	}
+	section.container--3 {
+		grid-area: sec3;
+	}
+	section.container--4 {
+		grid-area: sec4;
+	}
+	section.container--5 {
+		grid-area: sec5;
+	}
+}

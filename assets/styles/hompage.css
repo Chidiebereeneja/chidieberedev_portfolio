@@ -1,0 +1,160 @@
+:root {
+	--main-color: #1d1d1d;
+	--primary-color: rgb(2, 255, 213);
+	--secondary-color: #e7e7e7;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	width: 100%;
+	background-color: var(--main-color);
+}
+main {
+	width: 100%;
+	transform: translateY(40px);
+	display: flex;
+	justify-content: center;
+}
+main section.profile--container {
+	max-width: 1200px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	padding-block-start: 7rem;
+	padding-inline-end: 1rem;
+	z-index: -10;
+}
+main aside.profile--image {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2.5rem;
+	z-index: 0;
+}
+.profile--details {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+main aside.profile--image figure {
+	width: 250px;
+	height: 250px;
+	z-index: 3;
+	margin-top: -1px;
+	border-radius: 50%;
+	box-shadow: 0px 0px 4px var(--secondary-color),
+		0px 0px 4px var(--secondary-color), 0px 0px 4px var(--secondary-color),
+		0px 0px 4px var(--secondary-color), 0px 0px 4px var(--secondary-color),
+		0px 0px 4px var(--secondary-color);
+}
+main aside.profile--image figure img {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	box-shadow: 0px 0px 3px grey;
+}
+main aside.profile--text {
+	width: 100%;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	padding-inline-start: 2rem;
+}
+main aside .profile--details > strong {
+	color: var(--secondary-color);
+	font-size: 1.3rem;
+}
+main aside .profile--details h1 {
+	text-align: center;
+	color: var(--secondary-color);
+	margin-block: 5px;
+	font-size: 2rem;
+}
+main aside .profile--details > p {
+	text-align: center;
+	color: var(--secondary-color);
+	font-size: 1.2rem;
+}
+main aside .profile--details > p span {
+	color: var(--primary-color);
+}
+.choose--me {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-block-start: 5rem;
+}
+.choose--me > h2 {
+	color: var(--primary-color);
+	margin-block-end: 1.5rem;
+	font-size: calc(1.3rem + 1vw);
+}
+.choose--me--header {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	gap: 0.6rem;
+	margin-block: 0.5rem;
+}
+.choose--me--header a {
+	background-color: var(--secondary-color);
+	color: var(--main-color);
+	padding: 5px;
+	font-size: calc(15px + 0.1vw);
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: all 0.2s linear;
+}
+
+.choose--me--header a:hover {
+	background-color: #c0bfbf;
+}
+.choose--me--text {
+	max-width: 1000px;
+	width: 100%;
+	color: var(--secondary-color);
+	display: grid;
+	grid-template-columns: 1fr;
+	padding: 15px;
+	margin-bottom: 2rem;
+	line-height: 24px;
+}
+.choose--me--text div {
+	width: 90%;
+	align-self: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.active {
+	background-color: rgb(1, 105, 88) !important;
+	color: rgb(197, 195, 195) !important;
+	transform: translateY(-8px);
+}
+
+@media (max-width: 768px) {
+	.profile--container {
+		flex-direction: column;
+		gap: 10rem;
+	}
+	.profile--image {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+}

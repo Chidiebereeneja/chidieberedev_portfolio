@@ -1,0 +1,57 @@
+:root {
+	--main-color: #1d1d1d;
+	--primary-color: rgb(2, 255, 213);
+	--secondary-color: #e7e7e7;
+}
+body {
+	background-color: var(--main-color);
+	width: 100%;
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	overflow-y: hidden;
+}
+main {
+	max-width: 1200px;
+	width: 97%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* overflow: hidden; */
+}
+div {
+	width: 90%;
+	color: var(--primary-color);
+	text-align: center;
+	font-size: calc(1.3rem + 1vw);
+}
+
+.styleAnimation {
+	transition: all 0.2s;
+	animation: welcome alternate 15s forwards ease-in;
+}
+
+@keyframes welcome {
+	0% {
+		opacity: 1;
+	}
+
+	25% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 1;
+	}
+	75% {
+		opacity: 0.8;
+	}
+	80% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 0;
+	}
+}
