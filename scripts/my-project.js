@@ -1,5 +1,3 @@
-"use strict";
-
 const sections = document.querySelectorAll("main section");
 
 const obsCallback = function (entries, observer) {
