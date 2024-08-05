@@ -65,6 +65,7 @@ main ul li:nth-child(2) {
 	gap: 1rem;
 }
 main ul li:nth-child(2) h2 {
+	text-align: center;
 	color: var(--secondary-color);
 	font-size: calc(1vw + 1.6rem);
 }

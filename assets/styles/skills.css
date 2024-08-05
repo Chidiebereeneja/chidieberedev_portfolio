@@ -43,7 +43,7 @@ main {
 	width: 100%;
 	transform: translateY(11vh);
 	padding-block: 2rem;
-	padding-inline: 1.5rem;
+	padding-inline: 1rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -53,7 +53,7 @@ main {
 	width: 100%;
 	margin-block-start: 6rem;
 	margin-block-end: 5rem;
-	padding: 2rem;
+	padding: 0.5rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -71,7 +71,7 @@ main {
 	width: 100%;
 	color: var(--secondary-color);
 	text-align: center;
-	padding: 5rem;
+	padding: 0.5rem;
 	font-size: 1.3rem;
 	line-height: 26px;
 	box-shadow: 0px 0px 4px var(--primary-color), 0px 0px 4px var(--primary-color);
@@ -91,11 +91,18 @@ main {
 	color: var(--primary-color);
 	font-size: 2rem;
 	margin-top: 3rem;
+	text-align: center;
 }
 .responsive,
 .collaboration {
 	display: flex;
 	gap: 1rem;
+}
+
+.load div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 .problem {
 	display: flex;
@@ -103,7 +110,7 @@ main {
 	gap: 1rem;
 }
 .skill--header ~ section p {
-	width: 40%;
+	width: 90%;
 	margin-top: 10px;
 	color: var(--secondary-color);
 	line-height: 26px;
@@ -112,20 +119,26 @@ main {
 #about--language-container figure {
 	width: 100%;
 	display: flex;
+	align-items: center;
+	justify-content: center;
 	gap: 1.5rem;
 	margin-block-end: 1rem;
 }
 #about--language-container figure img {
-	width: 32%;
+	width: 30%;
+	max-width: 100px;
+	height: 120px;
 	background-color: #fff;
-	padding: 0.5rem;
+	object-fit: cover;
+	object-position: center;
+	padding: 0.2rem;
 	border-radius: 4px;
 }
 #about--language-container p {
 	width: 100%;
 }
 .skill--header ~ section p + img {
-	width: 45%;
+	width: 85%;
 	height: 290px;
 	margin-top: 1rem;
 	object-fit: cover;
@@ -140,7 +153,7 @@ main {
 .framework--text {
 	max-width: 800px;
 	width: 100%;
-	padding: 1rem;
+	padding: 0.5rem;
 }
 .framework--text p {
 	color: var(--secondary-color);
@@ -176,6 +189,12 @@ main {
 	#about--language-container figure img:nth-child(2) {
 		padding: 1.1rem;
 	}
+
+	#about--language-container figure img {
+		width: 20%;
+		height: 70px;
+	}
+
 	.responsive,
 	.collaboration {
 		display: flex;
@@ -185,5 +204,17 @@ main {
 		display: flex;
 		flex-direction: row-reverse;
 		gap: 1rem;
+	}
+	.load div {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+	.load div P {
+		width: 45%;
+	}
+	.load div p + img {
+		width: 45%;
 	}
 }
